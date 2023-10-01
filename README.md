@@ -76,3 +76,5 @@ After ensuring the prerequisites are met, follow these steps to set up and run t
    Open your browser and navigate to `http://localhost:3000` to see the application in action.
 
 ## License
+
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
