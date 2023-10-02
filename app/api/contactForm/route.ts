@@ -33,8 +33,7 @@ export async function POST(request: NextRequest) {
     const response = await fetch(apiEndpoint, {
       method: "POST",
       body: JSON.stringify({
-        firstName: body.firstName,
-        lastName: body.lastName,
+        name: body.name,
         email: body.email,
         message: body.message,
       }),

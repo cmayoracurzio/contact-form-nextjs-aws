@@ -5,7 +5,7 @@ import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 const ses = new SESClient({ region: "YOUR_AWS_REGION" });
 
 export const handler = async (event) => {
-  const { firstName, lastName, email, message } = JSON.parse(event.body);
+  const { name, email, message } = JSON.parse(event.body);
 
   const command = new SendEmailCommand({
     Destination: {
@@ -17,7 +17,7 @@ export const handler = async (event) => {
           Data: `
               New message:
               ---
-              Name: ${firstName} ${lastName}
+              Name: ${name}
               Email: ${email}
               Message: ${message}
             `,

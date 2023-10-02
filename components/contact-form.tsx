@@ -25,8 +25,7 @@ export default function ContactForm() {
   const form = useForm<ContactFormSchema>({
     resolver: zodResolver(contactFormValidator),
     defaultValues: {
-      firstName: "",
-      lastName: "",
+      name: "",
       email: "",
       message: "",
     },
@@ -62,25 +61,12 @@ export default function ContactForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           control={form.control}
-          name="firstName"
+          name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>First name</FormLabel>
+              <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your first name" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="lastName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Last name</FormLabel>
-              <FormControl>
-                <Input placeholder="Your last name" {...field} />
+                <Input placeholder="Your name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
