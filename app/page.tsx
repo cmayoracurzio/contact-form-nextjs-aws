@@ -1,14 +1,24 @@
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import ContactForm from "@/components/contact-form";
 
 export default function Home() {
   return (
-    <main className="flex h-screen w-full items-center">
-      <div className="container max-w-md space-y-4 rounded-md border p-6 shadow-lg">
-        <h1 className="text-left text-3xl font-bold tracking-tight">
-          Contact Form
-        </h1>
+    <Card className="max-sm:h-full max-sm:w-full max-sm:border-none">
+      <CardHeader>
+        <CardTitle>Contact Form</CardTitle>
+        <CardDescription>
+          Send us a message and we will get back to you ASAP.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
         <ContactForm />
-      </div>
-    </main>
+      </CardContent>
+    </Card>
   );
 }
